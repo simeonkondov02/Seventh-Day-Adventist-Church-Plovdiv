@@ -1,0 +1,80 @@
+#blur_container {
+  display: inline-block;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+#content {
+  width: 100vw;
+  height: calc(100vh);
+  position: absolute;
+  top: 0;
+  left: 0;
+  scroll-snap-type: both mandatory;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.container {
+  display: inline-block;
+  height: 100vh;
+  width: calc(100vw * 6 / 7);
+  position: relative;
+  scroll-snap-align: center;
+  scroll-snap-stop: normal;
+  overflow: hidden;
+  float: left;
+}
+
+.container:first-of-type {
+  width: 100vw;
+}
+
+.container:nth-of-type(2) {
+  height: 100vh;
+}
+
+#blur {
+  display: inline-block;
+  width: calc(100% + 100px);
+  height: calc(100% + 100px);
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  clip-path: polygon(0 0, calc(100vw / 6 * 7) 0%, calc(100vw / 6 * 7) 100%, 0% 100%);
+  background-image: url("../Images/Backgrounds/1.png");
+  background-size: cover;
+  background-position: right;
+  filter: blur(80px);
+  -webkit-filter: blur(80px);
+  z-index: -1;
+}
+
+#left {
+  display: inline-block;
+  height: 100vh;
+  width: calc(100vw - 100vw / 7 * 6);
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-image: url("../Images/Backgrounds/1.png");
+  background-size: cover;
+  background-position: right;
+  z-index: -1;
+  transition: .2s;
+}
+
+/*.whithout_background {
+  background-image: none !important;
+}*/
+
+#verse {
+  height: 30vh
+}
+
+#footer {
+  height: 40vh
+}

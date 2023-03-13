@@ -1,0 +1,52 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html, body {
+  scroll-behavior: smooth;
+  font-family: 'Alegreya Sans SC';
+}
+
+body {
+  overflow-y: hidden;
+  background-color: #ddd;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  display: inline-block;
+  list-style: none;
+}
+
+#label {
+  position: fixed;
+  top: 200px;
+  left: 10px;
+  padding: 20px;
+  background-color: white;
+  color: red;
+  font-size: 30px;
+  font-weight: bold;
+  z-index: 101 !important
+}
+
+#left_logo {
+  display: inline-block;
+  width: 70%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 15%;
+  transform: translateY(200px);
+  opacity: 0;
+  transition: .3s;
+}
+/*
+#verse_text {
+  background-color: red;
+}

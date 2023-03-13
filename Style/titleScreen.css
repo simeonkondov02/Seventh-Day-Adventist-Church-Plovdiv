@@ -1,0 +1,64 @@
+.container:first-of-type {
+  background-image: url("../Images/Backgrounds/backCrossesWithBackground.png");
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  height: 100vh !important
+}
+
+#front_cross {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../Images/Backgrounds/frontCross2.png");
+  background-position: center;
+  background-size: cover;
+  z-index: 1 !important;
+}
+
+#title_box {
+  display: inline-block;
+  width: 100%;
+  height: fit-content;
+  position: absolute;
+  bottom: calc(45vh);
+  left: 0;
+  text-align: center;
+  animation: .5s ease-in-out 0s 1 translate_from_bottom;
+}
+
+@keyframes translate_from_bottom {
+  0% {
+    transform: translateY(50vh);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+#transperent_title_container {
+  display: inline-block;
+  width: 100%;
+  height: 45vh;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  z-index: 99 !important;
+  animation: .5s ease-in-out 0s 1 translate_from_bottom;
+}
+
+@media screen and (max-width: 100vh) {
+  #title_box {
+    bottom: 50vh;
+  }
+
+  #transperent_title_container {
+    height: 50vh;
+  }
+}

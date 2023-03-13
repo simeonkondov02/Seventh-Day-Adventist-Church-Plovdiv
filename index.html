@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>Църква на адвентистите от седмия ден Пловдив Център</title>
+
+    <meta charset="utf-8">
+    <meta name="description" content="Църква на Адвентистите от седмия ден, Пловдив Център Гледаайте нашата следмична служба на живо.">
+		<meta name="keywords" content="адвентисти, аdventisti, адвентисти пловдив, casd plovdiv, цасд пловдив, пловдив център">
+    <meta name="author" content="Simeon Kondov, simeonkondov2@gmial.com">
+
+    <link rel="icon" href="Images/Logos/logo.png" type="image/x-icon">
+
+    <link href='https://fonts.googleapis.com/css?family=Alegreya Sans SC' rel='stylesheet'>
+
+    <link rel="stylesheet" href="Style/style.css">
+    <link rel="stylesheet" href="Style/burgerMenu.css">
+    <link rel="stylesheet" href="Style/navigation.css">
+    <link rel="stylesheet" href="Style/containers.css">
+    <link rel="stylesheet" href="Style/titleScreen.css">
+    <link rel="stylesheet" href="Style/fonts.css">
+    <link rel="stylesheet" href="Style/button.css">
+    <link rel="stylesheet" href="Style/iframe.css">
+    <link rel="stylesheet" href="Style/scrollbar.css">
+    <link rel="stylesheet" href="Style/footer.css">
+
+    <script type="text/javascript" src="Script/menu.js"></script>
+    <script type="text/javascript" src="Script/onScroll.js"></script>
+    <script type="text/javascript" src="Script/onLoad.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script type="text/javascript">
+      var verse = document.getElementById("verse_text");
+      var title = document.getElementById("verse_book");
+
+      document.getElementById("verse_text").stye.backgroundColor = "red";
+      title.innerHTML = "Book";
+    </script>
+
+  </head>
+  <body onload="loop(); loadVideo(); generateVerse();">
+
+    <header id="main_header">
+
+      <div id="menu_button" onclick="menu()">
+        <span id="line_1"></span>
+        <span id="line_2"></span>
+      </div>
+
+      <a id="logo" href="index.html#"><img id="logo_img" src="Images/TextLogo/1.svg"></a>
+
+      <nav id="main_nav">
+        <ul id="desc_nav_menu">
+          <li class="desc_nav_menu_item"><a onclick="closeMenu()" class="desc_nav_menu_link" href="index.html">Начало</a></li>
+          <li class="desc_nav_menu_item"><a onclick="closeMenu()" class="desc_nav_menu_link" href="index.html#video">Гледай на живо</a></li>
+          <li class="desc_nav_menu_item"><a onclick="closeMenu()" class="desc_nav_menu_link" href="index.html#map">Адрес</a></li>
+          <!--<li class="desc_nav_menu_item"><a onclick="closeMenu()" class="desc_nav_menu_link" href="index.html#program">Програма</a></li>-->
+        </ul>
+      </nav>
+    </header>
+
+    <section id="blur_container">
+      <span id="blur"></span>
+      <span id="left" class="whithout_background">
+        <img src="Images/Logos/whiteLogo.png" id="left_logo">
+      </span>
+
+      <section id="content">
+        <section class="container">
+
+          <section id="title_box">
+            <h1 class="main_title uppercase">Църква на адвентистите от седмия ден</h1>
+          </section>
+
+          <span id="front_cross"></span>
+
+          <span id="transperent_title_container">
+            <h1 class="transperent main_title uppercase">Пловдив - център</h1>
+          </span>
+
+        </section>
+
+        <div id="box">
+          <a class="button" id="title_botton" href="#video" style="z-index: 98 !important;">
+            <span class="onhover_text" id="btn">Гледай<img src="Images\Icons\right_arrows_w.png"></span>
+            <label>Гледай на живо</label>
+          </a>
+        </div>
+
+
+        <section class="container" id="video" onmouseover="move('video_iframe'); setBackgroundToLeftPanel()">
+          <section class="right_title">
+            <h1 class="main_title">Гледай ни на живо</h1>
+          </section>
+
+          <section class="left_iframe_container">
+            <iframe class="main_iframe" id="video_iframe" allowfullscreen="true" data-tilt data-tilt-reverse="true"
+              src="https://www.youtube.com/embed?max-results=1&controls=0&showinfo=0&rel=0&listType=user_uploads&list=plovdivcenter">
+            </iframe>
+          </section>
+        </section>
+
+
+        <!--<section class="container" id="verse">
+          <section class="left_title">
+            <h1 class="main_title" id="verse_book">Битие 01: 1 - 5</h1>
+          </section>
+
+          <section class="right_iframe_container">
+            <p class="text" id="verse_text">
+              В начало Бог създаде небето и земята.
+              А земята беше пуста и неустроена; и тъмнина покриваше бездната; и Божият Дух се носеше над водата.
+              И Бог каза: Да бъде светлина. И стана светлина.
+              И Бог видя, че светлината беше добро; и Бог раздели светлината от тъмнината.
+              И Бог нарече светлината Ден, а тъмнината нарече Нощ. И стана вечер, и стана утро, ден първи.
+              И Бог каза: Да бъде простор посред водите, който да раздели вода от вода.
+              И Бог направи простора; и раздели водата, която беше под простора, от водата, която беше над простора; и стана така.
+              И Бог нарече простора Небе. И стана вечер, и стана утро, ден втори.
+            </p>
+          </section>
+        </section>-->
+
+
+        <section class="container" id="program" onmouseover="move('iframe_3')">
+          <section class="left_title">
+            <h1 class="main_title" style="font-size: calc(3vh + 4vw);">Програма</h1>
+          </section>
+
+          <section class="right_iframe_container">
+            <iframe class="main_iframe"  id="iframe_3" frameborder="0" scrolling="no"
+              src="https://onedrive.live.com/embed?cid=DE3677807453A28E&resid=DE3677807453A28E%21269&authkey=ADvxyICV9C63B5o&em=2"></iframe>
+          </section>
+        </section>
+
+
+        <section class="container" id="map" onmouseover="move('iframe_4')">
+          <section class="right_title">
+            <h1 class="main_title">Намери ни на</h1>
+          </section>
+
+          <section class="left_iframe_container">
+            <iframe class="main_iframe" aria-hidden="false"  id="iframe_4"
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1479.0418307479797!2d24.7405373!3d42.1484965!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14acd1b92b2d8c71%3A0x2ae256794c05e7ef!2z0YPQuy4g4oCe0JrQsNC_0LjRgtCw0L0g0JHRg9GA0LDQs9C-4oCcIDQsIDQwMDAg0KbQtdC90YLRitGALCDQn9C70L7QstC00LjQsg!5e0!3m2!1sbg!2sbg!4v1586971603808!5m2!1sbg!2sbg">
+            </iframe>
+          </section>
+        </section>
+
+
+        <section class="container" id="footer">
+          <section class="left_title">
+            <h1 class="main_title">Последвай ни в</h1>
+          </section>
+
+          <section class="right_iframe_container">
+
+            <ul class="short_content_right" id="social_media_links_container">
+              <a target="_blank" href="https://www.facebook.com/Plovdiv.Center"><li class="social_media_link"><img src="Images/Icons/facebook.png" width="100px"></li></a>
+              <a target="_blank" href="https://twitter.com/pldcenter"><li class="social_media_link"><img src="Images/Icons/twitter.png" width="100px"></li></a>
+              <a target="_blank" href="https://www.youtube.com/channel/UCgIyYT5h6dfzVvJAADYqozg"><li class="social_media_link"><img src="Images/Icons/youtube.png" width="100px"></li></a>
+            </ul>
+          </section>
+
+          <div id="developed_by">
+            <p>Developed by <b id="developer_name">Simeon Kondov</b></p>
+          </div>
+        </section>
+
+      </section>
+    </section>
+
+    <!--<div id="label">
+      _
+    </div>-->
+
+  </body>
+</html>

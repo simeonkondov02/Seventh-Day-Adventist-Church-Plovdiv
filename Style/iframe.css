@@ -1,0 +1,54 @@
+.right_iframe_container {
+  display: grid;
+  place-items: center;
+  width: 60%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 5%;
+}
+
+.left_iframe_container {
+  display: grid;
+  place-items: center;
+  width: 60%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 5%;
+}
+
+.main_iframe {
+  width: 90%;
+  height: calc(100vh / 16 * 9);
+  border: none;
+  border-radius: 3vh;
+}
+
+@media screen and (max-width: 100vh) {
+  .right_iframe_container, .left_iframe_container {
+    width: 100%;
+    margin: 20% 0;
+  }
+
+  .main_iframe {
+    width: 96%;
+  }
+}
+
+.main_iframe {
+  opacity: 1;
+  margin: 0 !important; /*1*/
+  transition: .3s;
+  transition-timing-function: ease-in-out;
+}
+
+.left_iframe_container .main_iframe {
+  margin-right: 10vw;
+}
+
+.right_iframe_container .main_iframe {
+  margin-left: 10vw;
+}

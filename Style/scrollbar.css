@@ -1,0 +1,17 @@
+/*::-webkit-scrollbar {
+  width: 0px;
+}
+
+::-webkit-scrollbar-track {
+  background:  linear-gradient(45deg,
+    rgb(255, 0, 0) 0%,
+    rgb(255, 0, 0) 50%,
+    rgb(255, 0, 0)100%
+    )
+}
+
+::-webkit-scrollbar-thumb {
+  background: transparent;
+  opacity: 0;
+  box-shadow: 0px 0px 0px 100000vh rgb(102, 153, 204);
+}
